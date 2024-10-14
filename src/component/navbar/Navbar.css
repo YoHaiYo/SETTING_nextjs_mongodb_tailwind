@@ -1,0 +1,28 @@
+/* src/styles/navbar.css */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+  z-index: 40; /* 메뉴보다 아래에 위치 */
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+  opacity: 0; /* 기본값은 보이지 않음 */
+  pointer-events: none; /* 기본적으로 클릭을 무시 */
+}
+
+.menu-overlay.show {
+  opacity: 1; /* 보일 때의 opacity */
+  pointer-events: all; /* 클릭 이벤트 활성화 */
+}
+
+.slide-in {
+  transform: translateX(0); /* 원래 위치 */
+  transition: transform 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.slide-out {
+  transform: translateX(-100%); /* 좌측으로 숨기기 */
+}
