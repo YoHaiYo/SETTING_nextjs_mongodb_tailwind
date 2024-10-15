@@ -19,9 +19,8 @@ const Navbar = () => {
   // 메뉴 링크 정의
   const menuLinks = [
     { href: "/", label: "Home" },
-    { href: "#", label: "Our services" },
-    { href: "#", label: "About" },
-    { href: "#", label: "Contact" },
+    { href: "/login", label: "Login" },
+    { href: "/movies", label: "Movies" },
   ];
 
   return (
@@ -31,7 +30,7 @@ const Navbar = () => {
           <button>
             <div className="flex items-center space-x-2">
               <h2 className="text-black dark:text-white font-bold text-2xl">
-                Company
+                <Link href={menuLinks[0].href}>LOGO</Link>
               </h2>
             </div>
           </button>
